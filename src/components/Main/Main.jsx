@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./Main.css";
 import { assets } from "../../assets/assets";
 import { Context } from "../../Context/Context";
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const Main = () => {
   const {
@@ -75,7 +77,7 @@ const Main = () => {
                   <hr />
                 </div>
               ) : (
-                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+                <Markdown>{resultData}</Markdown>
               )}
             </div>
           </div>

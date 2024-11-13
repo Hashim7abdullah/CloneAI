@@ -4,7 +4,7 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #f0f4f9;
+  background:#f0f4f9;
 }
 .sidebar img {
   width: 20px;

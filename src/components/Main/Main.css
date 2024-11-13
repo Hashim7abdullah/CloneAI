@@ -126,6 +126,7 @@ font-weight: 300;
   padding: 0px 5%;
   max-height: 70vh;
   overflow-y: scroll;
+  
 }
 .result::-webkit-scrollbar{
   display: none;
@@ -148,9 +149,10 @@ font-weight: 300;
 }
 
 .result-data{
-  display: flex;
+  /* display: flex; */
   align-items: start;
   gap: 20px;
+  line-height: 2;
 }
 
 .loader{
@@ -166,4 +168,21 @@ font-weight: 300;
   background: linear-gradient(to right,#9ed7ff,#ffffff, #9ed7ff);
   background-size: 800px 50px;
   height: 20px;
+  animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+  0%{
+    background-position: -800px 0px;
+  }
+  100%{
+    background-position: 800px 0px;
+  }
+  
+}
+
+.result-data p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
 }
