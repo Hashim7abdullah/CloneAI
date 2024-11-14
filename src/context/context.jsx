@@ -25,15 +25,15 @@ const ContextProvider = (props) => {
     setPreviousPrompt(prev=>[...prev,input])
     const response = await run(input);
     let responseArray = response.split("**");
-    let newResponse;
+    let newResponse="";
     for (let i = 0; i < responseArray.length; i++) {
       if (i === 0 || i % 2 !== 1) {
         newResponse += responseArray[i];
       } else {
-        newResponse += "<b>" + responseArray[i] + "</b>";
+        newResponse += "<br><b>" + responseArray[i] + "</b>";
       }
     }
-    let newResponse2 = newResponse.split("*").join("</br>");
+    let newResponse2 = newResponse.replace(/\*\s*/g, "<br>");
     let newResponseArray = newResponse2.split(" ");
     for (let i = 0; i < newResponseArray.length; i++) {
       const nextWord = newResponseArray[i];
