@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import "./Main.css";
 import { assets } from "../../assets/assets";
 import { Context } from "../../Context/Context";
-import Markdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const Main = () => {
   const {
@@ -77,7 +77,7 @@ const Main = () => {
                   <hr />
                 </div>
               ) : (
-                <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
               )}
             </div>
           </div>
@@ -94,7 +94,9 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+              {input ? (
+                <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">
