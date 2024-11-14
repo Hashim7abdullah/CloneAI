@@ -77,7 +77,7 @@ const Main = () => {
                   <hr />
                 </div>
               ) : (
-                <Markdown>{resultData}</Markdown>
+                <p dangerouslySetInnerHTML={{__html:resultData}}></p>
               )}
             </div>
           </div>

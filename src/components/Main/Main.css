@@ -149,7 +149,7 @@ font-weight: 300;
 }
 
 .result-data{
-  /* display: flex; */
+  display: flex;
   align-items: start;
   gap: 20px;
   line-height: 2;
